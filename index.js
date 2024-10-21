@@ -2,15 +2,15 @@ function toggleMenu() {
     const menu = document.querySelector('.nav-menu');
     const hamburgerIcon = document.querySelector('.hamburger i');
     
-    menu.classList.toggle('show-menu'); // Toggle menu visibility
+    menu.classList.toggle('show-menu'); 
     
-    // Toggle between the hamburger icon and close (cross) icon
+    
     if (menu.classList.contains('show-menu')) {
         hamburgerIcon.classList.remove('fa-bars');
-        hamburgerIcon.classList.add('fa-times'); // Show cross icon
+        hamburgerIcon.classList.add('fa-times'); 
     } else {
         hamburgerIcon.classList.remove('fa-times');
-        hamburgerIcon.classList.add('fa-bars'); // Show hamburger icon
+        hamburgerIcon.classList.add('fa-bars'); 
     }
 }
 
