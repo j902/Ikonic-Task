@@ -1,0 +1,823 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+    
+    /* Define global colors and fonts in :root */
+:root {
+    --primary-color: #345884; /* Blue */
+    --secondary-color: #4D8ED3; /* Green */
+    --accent-color: #54585A; /* Red */
+    --font-primary: 'Catamaran', sans-serif;
+    --font-secondary: 'Catamaran', sans-serif;
+    --font-size-base: 16px; /* Base font size */
+  }
+  
+  /* Applying global colors and fonts */
+  body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    color: var(--primary-color);
+    background-color: #f9f9f9;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+  }
+  h1 {
+    font-size: 3rem; /* Adjust font size as per your design */
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--accent-color);
+
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+
+}
+
+h5 {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+
+}
+
+h6 {
+    font-size: 1rem;
+    color: var(--accent-color);
+
+}
+  
+  button {
+    background-color: var(--primary-color);
+    color: white;
+    font-family: var(--font-primary);
+  }
+  
+  a {
+    color: var(--accent-color);
+  }
+  p{
+    color: var(--accent-color);
+    line-height: 1.5em;
+  }
+
+  @media (max-width: 768px){
+    h1 {
+        font-size: 2.5rem; /* Adjust font size as per your design */
+        line-height: 1.2em;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.6rem;
+    }
+    
+    h4 {
+        font-size: 1.2rem;
+    }
+    
+    h5 {
+        font-size: 1rem;
+    }
+    
+    h6 {
+        font-size: 0.5rem;
+    }
+  }
+
+
+
+
+body {
+    font-family: var(--font-primary);
+}
+
+.header {
+    background-color: white;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc; /* Optional: adds a subtle border under the header */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px; 
+    
+}
+.nav-menu{
+    margin-left: 10%;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.nav-menu ul li {
+    position: relative;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px;
+}
+
+.nav-menu ul li a:hover {
+    color: #007bff;
+}
+.dropdown ul{
+    display: block;
+    transition: all .5s ease;
+}
+ .nav-menu ul li:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    z-index: 999;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown li {
+    width: 150px;
+    text-align: left;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+}
+
+.dropdown li a:hover {
+    background-color: #f5f5f5;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu ul li {
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+    }
+
+    .show-menu {
+        display: block; /* This class will show the nav when the hamburger is clicked */
+    }
+}
+
+/* banner start */
+
+/* Banner Container */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    background: url('assets/Images/home\ banner.jpg') center/cover no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: start; /* Centers content horizontally */
+    color: white; /* Ensures text is visible on dark background */
+}
+
+/* Gradient Overlay */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent linear-gradient(90deg, #4F514FF2 0%, #4F514F80 57%, #4F514F00 78%, #4F514F00 100%) no-repeat padding-box;
+    z-index: 1; /* Ensure it's above the image */
+}
+
+/* Banner Content */
+.banner-content {
+    position: relative;
+    z-index: 2; /* Ensures the content is above the gradient */
+    margin: 10%;
+    text-align: left;
+    line-height: 4rem;
+}
+
+.banner-content h1 {
+    margin-bottom: 10px;
+}
+.banner-content p{
+    font-size:24px;
+    color: #fff;
+}
+
+.contact-info{
+    margin: 10% 10% 2% 10% ;
+}
+
+.contact-info h2{
+margin-bottom: 10px;
+}
+
+/* General Card Styling */
+.info-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0px;
+    margin: 0% 10% 2% 10% ;
+}
+
+.card {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 23%;
+    transition: box-shadow 0.3s ease;
+}
+
+.card i {
+    font-size: 40px; /* Adjust size of icons */
+    margin-bottom: 10px;
+    display: block;
+}
+
+.card p {
+    font-size: 14px;
+    color: #333;
+}
+
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Container for central alignment */
+.accreditation {
+    background-color: #f2f2f2; /* Light grey background */
+    padding: 80px 20px;
+    text-align: center;
+    
+    
+}
+
+.accreditation .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.accreditation h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.accreditation p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accreditation img {
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Virtual Tour Section */
+.virtual-tour {
+    background-color: #3579C1; /* Blue background */
+    padding: 60px 20px;
+    color: white;
+}
+
+.virtual-tour .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;  /* Center the content */
+    display: flex;
+    flex-direction: column;  /* Stack content vertically */
+    align-items: center;  /* Center the content horizontally */
+}
+
+.virtual-tour h2 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.virtual-tour .video-thumbnail {
+    position: relative;
+    width: 100%;
+    max-width: 700px;  
+    display: inline-block;
+}
+
+.virtual-tour .video-thumbnail img {
+    width: 100%; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.virtual-tour .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.virtual-tour .play-button i {
+    width: 50%;
+    height: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+/* Popup Modal */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.popup-content {
+    position: relative;
+    margin: 5% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.popup iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 8px;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-popup:hover {
+    color: #f00;
+}
+
+.carousel-container {
+    position: relative;  
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;  
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-item {
+    display: none;
+    position: absolute;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item.active {
+    display: block;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.carousel-control {
+    position: absolute;           
+    top: 50%;                     
+    transform: translateY(-50%);  
+    border: 2px solid var(--primary-color);
+    background: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;  
+}
+
+.carousel-control i {
+    font-size: 1.5em; 
+    color: var(--primary-color);      
+}
+
+.carousel-control:hover i {
+    color: var(--secondary-color);       
+}
+
+.carousel-control.prev {
+    left: -60px;    
+}
+
+.carousel-control.next {
+    right: -60px;   
+}
+
+.programes{
+    background-color: #f2f2f2; /* Blue background */
+    padding: 60px 20px;
+    text-align: center;  /* Center the content */
+    display: flex;
+    flex-direction: column;  /* Stack content vertically */
+    align-items: center;
+
+}
+
+.programes h2{
+    padding-bottom: 10px;
+}
+
+.programes p{
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding-top: 50px;
+}
+
+
+
+.faq-item {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.faq-question {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-toggle {
+    font-size: 1.5em;
+}
+
+.faq-answer {
+    margin-top: 10px;
+    font-size: 14px;
+    display: none;  /* Initially hide the answers */
+    padding: 10px 0;
+}
+
+.faq-answer.active {
+    display: block;  /* Show when clicked */
+}
+
+.additional-info {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    color: #333;
+}
+
+.additional-info p{
+    padding-top:20px;
+}
+
+.button-group {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    justify-content: center;
+  align-items: center;
+  padding: 30px 0px;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.secondary-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.secondary-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* Basic footer styling */
+footer {
+    background-color: #f2f2f2;  /* Light background for main footer area */
+    padding-top: 80px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-wrap: wrap;  /* Allow flex items to wrap on smaller screens */
+}
+
+/* Footer left section (logo and mission statement) */
+.footer-left {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer-mission {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Footer links section */
+.footer-links {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.link-group {
+    flex: 1;
+    min-width: 150px;
+    margin-right: 20px;
+}
+
+.link-group h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.link-group a {
+    display: block;
+    margin-bottom: 5px;
+    color: inherit;  /* Maintain global text color */
+    text-decoration: none;
+}
+
+/* Footer contact section */
+.footer-contact {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #333;  /* Ensure the icons use a proper color */
+    text-decoration: none;
+}
+
+.address, .phone {
+    font-size: 1rem;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+    background-color: #333;  /* Dark background for bottom section */
+    color: #fff;             /* White text */
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.legal-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.legal-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.legal-links span {
+    margin: 0 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .link-group {
+        margin-bottom: 15px;
+        min-width: 200px;
+    }
+
+    .footer-contact {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-mission {
+        font-size: 0.9rem;
+    }
+
+    .footer-links {
+        width: 100%;
+    }
+
+    .legal-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .footer-bottom p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .virtual-tour h2 {
+        font-size: 28px;
+    }
+
+    .virtual-tour .play-button img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .accreditation h2 {
+        font-size: 28px;
+    }
+
+    .accreditation p {
+        font-size: 16px;
+    }
+
+    .accreditation img {
+        max-width: 200px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .info-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+
+
+
+
+  

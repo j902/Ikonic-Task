@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ikonic Test</title>
+</head>
+<body>
+    
+<!-- Header Start -->
+
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="assets/Images/logo.png" alt="Cornerstone Healthcare Group">
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                    <div class="dropdown">
+                    <ul>
+                        <li><a href="#">Service 1</a></li>
+                        <li><a href="#">Service 2</a></li>
+                    </ul>
+                </div>
+                </li>
+                <li><a href="#">Who We Serve</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i> <!-- This is the hamburger icon -->
+        </div>
+
+    </div>
+
+
+
+   </header>
+<!-- header ends -->
+
+
+    <!-- banner starts -->
+
+    <div class="banner">
+        <div class="banner-content">
+            <h1>Cornerstone Specialty Hospitals</h1>
+            <p>Southwest Louisiana</p>
+        </div>
+    </div>
+
+    <!-- banner ends -->
+
+    <!-- body starts -->
+
+    <div class="contact-info">
+       
+            <h2>Cornerstone Specialty Hospitals Southwest Louisiana</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut aperiam velit libero enim mollitia temporibus atque, repellat totam minus placeat eum doloribus neque qui dolorum laborum amet id facere perferendis.</p>
+    
+        </div>
+
+        <section class="info-cards">
+            <div class="card">
+                <i class="fa-solid fa-map-location-dot"></i>
+                                <p>524 Dr. Michael Debakey Drive, 3rd Floor, Lake Charles, LA 70601</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-phone"></i>
+                <p>(123) 4567 890</p>
+            </div>
+            <div class="card">
+                <i class="fa-brands fa-facebook-f"></i>
+                <p>Follow Us</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <p>Success Stories</p>
+            </div>
+        </section>
+        
+        <section class="accreditation">
+                <h2>Accreditation</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex excepturi officiis fuga adipisci iure numquam? Beatae vero magni quisquam itaque doloribus officia ut sunt magnam. Saepe aut eum magni ipsam!</p>
+                <img src="assets/Images/employee 15.png" alt="The Joint Commission Logo">
+            
+        </section>
+        
+        <section class="virtual-tour">
+            <div class="container">
+                <h2>Take a Virtual Tour</h2>
+                <div class="video-thumbnail">
+                    <img src="assets/Images/vitual image.jpg" alt="Virtual Tour Thumbnail">
+                    <div class="play-button">
+                        <i class="fa-regular fa-circle-play" id="play-video"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div id="video-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-popup">&times;</span>
+                <!-- <iframe width="560" height="315" id="popup-video" src="https://www.youtube.com/embed/z83I7jJszUM?controls=0&showinfo=0&rel=0&modestbranding=1&autoplay=1 -->
+                " frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <div class="carousel-container">
+            <h2>Why We Make A Difference in Southwest Louisiana</h2>
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <video controls poster="assets/Images/carasule 1.jpg">
+                        <source src="assets/Images/Video 1.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="carousel-item">
+            <video controls poster="assets/Images/carasule 2.jpg">
+                <source src="assets/Images/Video 1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!-- Add more items as needed -->
+    </div>
+
+    <button class="carousel-control prev" onclick="moveSlide(-1)">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="carousel-control next" onclick="moveSlide(1)">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</div>
+
+<div class="programes">
+    <h2>Our Programs</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed provident perspiciatis soluta eaque facilis assum</p>
+
+    <h3>Comment will be used for acf services</h3>
+
+</div>
+
+<div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+
+    <!-- FAQ item -->
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            Is a Cornerstone Specialty Hospital right for me? <span class="faq-toggle">-</span>
+        </div>
+        <div class="faq-answer" style="display: block;">
+            Cornerstone Specialty Hospitals provide care for those who are ready to be discharged from a general acute care hospital, but require an additional extended period of intensive medical care before they are ready to return home. Treatment and care is designed to bridge the gap between the acute care hospital and home.
+        </div>
+    </div>
+
+    <!-- Repeat FAQ items -->
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            Are Cornerstone Specialty Hospitals and nursing homes the same? <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            No, Cornerstone Specialty Hospitals provide more intensive care services compared to typical nursing homes, including longer-term acute care.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            How are Cornerstone Specialty Hospitals different from general acute care hospitals? <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            Cornerstone Specialty Hospitals focus on long-term acute care and recovery, providing an extended care period that isn’t available in general hospitals.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            Why do patients and families choose Cornerstone Specialty Hospitals? <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            Patients and families choose Cornerstone for its specialized care and longer-term recovery services, tailored to each patient’s needs.
+        </div>
+    </div>
+</div>
+
+<!-- Paragraphs after the FAQ section -->
+<div class="additional-info">
+    <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, tempore accusantium non nostrum architecto atque amet</h6>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident illum delectus odit dolores omnis deleniti? </p>
+
+    <!-- Inline buttons -->
+    <div class="button-group">
+        <button class="primary-btn">Learn More</button>
+        <button class="secondary-btn">Contact Us</button>
+    </div>
+</div>
+       
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <img src="assets/Images/logo.png" alt="Cornerstone Healthcare Group Logo" class="footer-logo">
+            <p class="footer-mission">
+                Our mission is to make a difference by providing exceptional care and delivering the best experience. We pride ourselves on our quality of care, responsive service, and commitment to excellence.
+            </p>
+        </div>
+        <div class="footer-links">
+            <div class="link-group">
+                <h4>Home</h4>
+                <a href="#">About Us</a>
+                <a href="#">Locations</a>
+                <a href="#">Who We Serve</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="link-group">
+                <h4>Careers</h4>
+                <a href="#">Services</a>
+                <a href="#">Specialty Hospitals</a>
+                <a href="#">Senior Living</a>
+                <a href="#">Behavioral Health</a>
+            </div>
+        </div>
+        <div class="footer-contact">
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="address">2200 Ross Avenue, Suite 5400<br>Dallas, TX 75201</p>
+            <p class="phone">(469) 621-6700</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2022 Cornerstone Healthcare Group. All rights reserved.</p>
+        <div class="legal-links">
+            <a href="#">Terms of Use</a>
+            <span>|</span>
+            <a href="#">Notice of Privacy Practices</a>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="index.js"></script>
+
+    
+</body>
+</html>
