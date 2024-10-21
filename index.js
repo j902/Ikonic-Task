@@ -1,35 +1,47 @@
 function toggleMenu() {
     const menu = document.querySelector('.nav-menu');
-    menu.classList.toggle('show-menu'); // This will show/hide the menu
+    const hamburgerIcon = document.querySelector('.hamburger i');
+    
+    menu.classList.toggle('show-menu'); // Toggle menu visibility
+    
+    // Toggle between the hamburger icon and close (cross) icon
+    if (menu.classList.contains('show-menu')) {
+        hamburgerIcon.classList.remove('fa-bars');
+        hamburgerIcon.classList.add('fa-times'); // Show cross icon
+    } else {
+        hamburgerIcon.classList.remove('fa-times');
+        hamburgerIcon.classList.add('fa-bars'); // Show hamburger icon
+    }
 }
 
 
 // Get the elements
 var popup = document.getElementById("video-popup");
 var closeBtn = document.querySelector(".close-popup");
-var videoTrigger = document.getElementById("video-trigger");
+var videoTrigger = document.getElementById("play-video"); 
 var iframe = document.getElementById("popup-video");
+var videoSrc = iframe.src; 
 
-// Open the popup when the icon is clicked
+
 videoTrigger.addEventListener('click', function() {
     popup.style.display = "block";
-    iframe.src += "?autoplay=1"; // Autoplay video when popup opens
+    iframe.src = videoSrc + "?autoplay=1"; 
 });
 
-// Close popup and stop video
+
 closeBtn.addEventListener('click', function() {
     popup.style.display = "none";
-    // Reset iframe source to stop the video
-    iframe.src = iframe.src;
+    iframe.src = ""; 
 });
 
-// Optional: close popup if clicked outside of the video area
+
 window.addEventListener('click', function(event) {
     if (event.target == popup) {
         popup.style.display = "none";
-        iframe.src = iframe.src;
+        iframe.src = ""; 
     }
 });
+
 
 
 
@@ -53,7 +65,7 @@ function moveSlide(step) {
     showSlide(currentSlide);
 }
 
-// Initialize the carousel by showing the first slide
+
 showSlide(currentSlide);
 
 
@@ -61,7 +73,7 @@ function toggleFAQ(element) {
     const answer = element.nextElementSibling;
     const toggle = element.querySelector(".faq-toggle");
 
-    // Toggle the display of the answer
+    
     if (answer.style.display === "block") {
         answer.style.display = "none";
         toggle.textContent = "+";
